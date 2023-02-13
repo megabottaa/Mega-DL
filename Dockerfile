@@ -11,4 +11,4 @@ WORKDIR /MegaDL-Bot
 RUN pip3 install --upgrade pip
 RUN pip3 install -U -r requirements.txt
 
-CMD python3 main.py
+CMD gunicorn app:app & python3 main.py
